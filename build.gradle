@@ -30,14 +30,16 @@ dependencies {
   implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.34'
   // https://mvnrepository.com/artifact/javax.validation/validation-api
   implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+  // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+  implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.10.Final'
  //https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
   implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.36.Final'
 // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
   implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.3.36.Final'
 // https://mvnrepository.com/artifact/mysql/mysql-connector-java
   implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
-  compileOnly 'org.projectlombok:lombok:1.18.32'
-  annotationProcessor 'org.projectlombok:lombok:1.18.32'
+  compileOnly 'org.projectlombok:lombok:1.18.30'
+  annotationProcessor 'org.projectlombok:lombok:1.18.30'
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

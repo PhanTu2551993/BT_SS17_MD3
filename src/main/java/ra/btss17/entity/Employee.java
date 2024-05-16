@@ -26,8 +26,6 @@ public class Employee {
     private Integer empId;
     @Column(name = "empName")
     @NotEmpty(message = "Employee name is empty!")
-    @NotNull(message = "Employee name is empty!")
-    @NotBlank(message = "Employee name is empty!")
     private String empName;
     @Column(name = "address")
     @NotEmpty(message = "Adress Employee is empty!")

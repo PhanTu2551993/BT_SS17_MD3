@@ -10,7 +10,7 @@
 </p>
 <div id="form">
     <form action="#" th:action="@{/Employee/update}" th:object="${employee}"
-          method="POST" novalidate="novalidate">
+          method="POST">
         <input type="text" readonly="true" th:field="*{empId}"/>
         <div>
             <label>Employee Name</label>
