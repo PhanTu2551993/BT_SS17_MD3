@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>EMPLOYEE</h3>
+<p>
+    <a th:href="@{/create}">
+        Add new employee
+    </a>
+</p>
+
+<table id = "customers">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Birthday</th>
+        <th>Phone</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="e : ${employee}">
+        <td th:text="${e.empId}"></td>
+        <td th:text="${e.empName}"></td>
+        <td th:text="${e.address}"></td>
+        <td th:text="${e.dob}"></td>
+        <td th:text="${e.phone}"></td>
+        <td><a th:href="@{/Employee/edit/{id}(id=${e.getEmpId()})}">edit</a></td>
+        <td><a th:href="@{/Employee/delete/{id}(id=${e.getEmpId()})}" onclick="return confirm('Ban chac chua? 🤡')">delete</a></td>
+        <td><a th:href="@{/Employee/view/{id}(id=${e.getEmpId()})}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

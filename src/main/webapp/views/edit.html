@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Edit Employee</h3>
+<p>
+    <a th:href="@{/Employee}">
+        Back to employee list
+    </a>
+</p>
+<div id="form">
+    <form action="#" th:action="@{/Employee/update}" th:object="${employee}"
+          method="POST" novalidate="novalidate">
+        <input type="text" readonly="true" th:field="*{empId}"/>
+        <div>
+            <label>Employee Name</label>
+            <input type="text" th:field="*{empName}"/>
+        </div>
+        <div>
+            <label>Employee Adress</label>
+            <input type="email" th:field="*{address}"/>
+        </div>
+        <div>
+            <label>Employee Birthday</label>
+            <input type="date" th:field="*{dob}"/>
+        </div>
+        <div>
+            <label>Employee Phone</label>
+            <input type="text" th:field="*{phone}"/>
+        </div>
+        <input type="submit" value="Edit"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
